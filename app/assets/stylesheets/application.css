@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+.cell {
+  background-color: #2196F3;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  border-style: solid;
+  border-color: #ded0d0;
+}
+
+.table-spacing {
+  border-collapse: separate;
+  border-spacing: 15px;
+}
+
+#textBox {
+  width: 490px;
+}
+
+#btn {
+  height: 38px;
+  width: 70px;
+  border-radius: 5px;
+  background-color: #c5d3da;
+}

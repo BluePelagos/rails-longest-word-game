@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="application.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<div class = "container">
+  <h1>New Game</h1>
+  <table class="table-spacing">
+    <tr>
+      <td class ="cell"><%= @letters[0] %></td>
+      <td class ="cell"><%= @letters[1] %></td>
+      <td class ="cell"><%= @letters[2] %></td>
+      <td class ="cell"><%= @letters[3] %></td>
+      <td class ="cell"><%= @letters[4] %></td>
+      <td class ="cell"><%= @letters[5] %></td>
+      <td class ="cell"><%= @letters[6] %></td>
+      <td class ="cell"><%= @letters[7] %></td>
+      <td class ="cell"><%= @letters[8] %></td>
+      <td class ="cell"><%= @letters[9] %></td>
+    </tr>
+  </table>
+  <br>
+  <p>What is the longest word you can find?</p>
+  <form action="/score" method="post" class="form-inline">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <input class="form-control" id="textBox" type="text" name="word" placeholder="word">
+    <input name="grid" type="hidden" value="<%= @letters %>" />
+    <input type="submit" id="btn" value="Play">
+  </form>
+</div>
